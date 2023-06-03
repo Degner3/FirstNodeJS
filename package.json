@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Degner3/FirstNodeJS/issues"
   },
-  "homepage": "https://github.com/Degner3/FirstNodeJS#readme"
+  "homepage": "https://github.com/Degner3/FirstNodeJS#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
