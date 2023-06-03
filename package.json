@@ -1,0 +1,23 @@
+{
+  "name": "firstnodejs",
+  "version": "1.0.0",
+  "description": "Min første NodeJS Projekt",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Degner3/FirstNodeJS.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Me",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Degner3/FirstNodeJS/issues"
+  },
+  "homepage": "https://github.com/Degner3/FirstNodeJS#readme"
+}
