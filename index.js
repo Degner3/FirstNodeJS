@@ -70,6 +70,8 @@ app.use((req, res, next) => {
 //       console.log("Express server kører på http://localhost:4444");
 // });
 
+
+// Aktiverer server og lytter på port fra .env fil
 app.listen(process.env.PORT, () => {
       console.log(`Server kører på //http://localhost:${process.env.PORT}`);
   })
