@@ -4,7 +4,8 @@
 import express from 'express';
 import { productsRouter } from './Express_Frame/products.router.js';
 import { aboutRouter } from './Express_Frame/about.router.js';
-// import { postRouter } from './Routes/post.router.js';
+import { postRouter } from './Express_Frame/post.router.js';
+import { songRouter } from './Routes/song.router.js';
 
 // Importerer og sætter dotenv til globale vars
 import dotenv from 'dotenv';
@@ -50,12 +51,15 @@ app.get("/get", (req, res) => {
                   res.send(result)
               }
            })
-  });
+});
 
 
 // Anvender eksterne routes
 app.use(productsRouter)
 app.use(aboutRouter)
+app.use("/posts", postRouter)
+// Routes
+app.use(songRouter)
 
 
 
@@ -74,4 +78,4 @@ app.use((req, res, next) => {
 // Aktiverer server og lytter på port fra .env fil
 app.listen(process.env.PORT, () => {
       console.log(`Server kører på //http://localhost:${process.env.PORT}`);
-  })
+})
