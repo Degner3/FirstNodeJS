@@ -141,9 +141,28 @@ class songController {
 
 
     // delete 
-    delete = () => {
-        console.log('Kører delete metode');
-        return true
+    delete = (req, res) => {
+        // console.log('Kører delete metode');
+        // return true
+        
+        const id = parseInt(req.params.id)
+        // const id = req.params.id
+        // console.log(id);
+
+        const sql = `
+        DELETE FROM song s
+        WHERE s.id = ?
+        `
+        
+        db.query(sql, [id], (err, result) => {
+            if(err) {
+                console.error(err);
+            }
+            else {
+                res.json(result)
+                // resolve({ status: true, id: req.body.id })
+            }
+        })
     }
 
 }

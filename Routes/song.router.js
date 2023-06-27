@@ -49,8 +49,10 @@ songRouter.put('/song', (req, res) => {
 
 
 // Route med DELETE method - Sletter
-songRouter.delete('/song', (req, res) => {
-    console.log(song.delete());
+songRouter.delete('/song/:id', (req, res) => {
+    // console.log(song.delete());
+
+    return song.delete(res, req)
 })
 
 
